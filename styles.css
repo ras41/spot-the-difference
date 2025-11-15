@@ -30,11 +30,18 @@ header {
   box-shadow: 0 2px 5px rgba(82, 6, 214, 0.2);
 }
 
-.score-container {
-  font-size: 1.5em;
-  margin-top: 10px;
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 15px;
 }
 
+.score-container,
+.timer-container {
+  font-size: 1.5em;
+  color: #f1c40f;
+}
 /* 3. The Game Area (Side-by-side) */
 .game-container {
   display: flex;
@@ -51,6 +58,7 @@ header {
 
   cursor: pointer;
   transition: transform 0.2s ease-out;
+  min-width: 350px;
 }
 
 .image-wrapper:hover {

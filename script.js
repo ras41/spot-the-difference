@@ -4,6 +4,9 @@ let gameData;
 let score = 0;
 let foundDifferences = [];
 
+let timerInterval = null;
+let startTime = 0;
+
 const gameTitle = document.getElementById("game-title");
 const scoreDisplay = document.getElementById("score");
 const totalDisplay = document.getElementById("total-diff");
@@ -12,6 +15,7 @@ const imageWrapper2 = document.getElementById("image-wrapper-2");
 const gameImage1 = document.getElementById("game-image-1");
 const gameImage2 = document.getElementById("game-image-2");
 const successMessage = document.getElementById("success-message");
+const timerDisplay = document.getElementById("timer");
 
 const foundSound = new Audio("assets/found_sound.mp3");
 
@@ -42,6 +46,8 @@ function setupGame() {
   // Add click listeners to both image wrappers
   imageWrapper1.addEventListener("click", handleImageClick);
   imageWrapper2.addEventListener("click", handleImageClick);
+
+  startTimer();
 }
 
 // 4. --- THE CORE: HANDLE THE CLICK ---
@@ -116,5 +122,27 @@ function playSound() {
 function checkWinCondition() {
   if (score === gameData.differences.length) {
     successMessage.classList.remove("hidden");
+    clearInterval(timerInterval);
   }
+}
+
+// --- NEW HELPER: THE TIMER ---
+function startTimer() {
+  startTime = Date.now();
+
+  timerInterval = setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
+  const currentTime = Date.now();
+
+  const elapsedSeconds = Math.floor((currentTime - startTime) / 1000);
+
+  const minutes = Math.floor(elapsedSeconds / 60);
+  const seconds = elapsedSeconds % 60;
+
+  const formattedMinutes = String(minutes).padStart(2, "0");
+  const formattedSeconds = String(seconds).padStart(2, "0");
+
+  timerDisplay.textContent = `${formattedMinutes}:${formattedSeconds}`;
 }
