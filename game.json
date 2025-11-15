@@ -1,0 +1,17 @@
+{
+  "gameTitle": "Spot the Difference - Animals",
+  "images": {
+    "image1": "images/image1.png",
+    "image2": "images/image2.png"
+  },
+  "differences": [
+    { "_comment_for_id_1":"raccoon tail", "id": 1, "x": 226, "y": 207, "width": 48, "height": 20 },
+    { "_comment_for_id_2":"monkey tooth",  "id": 2, "x": 284, "y": 214, "width": 23, "height": 16 },
+    { "_comment_for_id_3":"giraffe hand",  "id": 3, "x": 306, "y": 150, "width": 62, "height": 30 },
+    { "_comment_for_id_4":"elephant eyes",  "id": 4, "x": 107, "y": 94, "width": 26, "height": 10 },
+    { "_comment_for_id_5":"elephant hands",  "id": 5, "x": 147, "y": 122, "width": 32, "height": 80 },
+    { "_comment_for_id_6":"frog eyes",  "id": 6, "x": 172, "y": 241, "width": 26, "height": 20 },
+    { "_comment_for_id_7":"raccoon eyes",  "id": 7, "x": 202, "y": 203, "width": 35, "height": 14 },
+    { "_comment_for_id_8":"mankey tail",  "id": 9, "x": 233, "y": 276, "width": 76, "height": 21 }
+  ]
+}

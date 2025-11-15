@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fredoka One", cursive;
+  background-color: #ecf0f1;
+  color: #34495e;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 2. Header and Score */
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #0fa9f1; /* Dark Slate Blue */
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(82, 6, 214, 0.2);
+}
+
+.score-container {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* 3. The Game Area (Side-by-side) */
+.game-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  position: relative;
+  border: 3px solid #34495e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.01);
+}
+
+#game-image-1,
+#game-image-2 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4. The Markers */
+.difference-marker {
+  position: absolute;
+  border: 4px solid #ef1313;
+  border-radius: 50%;
+  background-color: rgba(247, 87, 87, 0.2);
+
+  pointer-events: none;
+}
+
+/* 5. Success Message */
+.hidden {
+  display: none;
+}
+
+#success-message {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2em;
+}
